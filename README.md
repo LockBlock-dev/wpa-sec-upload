@@ -15,9 +15,11 @@ Upload capture files to wpa-sec.
 {
     "api_url": "https://wpa-sec.stanev.org/",
     "api_key": "",
-    "whitelist": [] //SSIDs like "AndroidAP1234"
+    "whitelist": []
 }
 ```
+
+Put your own WIFIs SSID in the whitelist like `["AndroidAP1234"]`.
 
 -   Run `python3 upload.py`.
 

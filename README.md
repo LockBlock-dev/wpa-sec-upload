@@ -25,7 +25,7 @@ Put your own WIFIs SSID in the whitelist like `["AndroidAP1234"]`.
 
 ## Credits
 
-[Czechball for his upload script](https://github.com/Czechball/wpa-sec-api)
+-   [Czechball's upload script.](https://github.com/Czechball/wpa-sec-api)
 
 ## Copyright
 

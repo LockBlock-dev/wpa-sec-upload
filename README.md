@@ -7,7 +7,7 @@ Upload capture files to wpa-sec.
 ## Installation
 
 -   Install [Python3](https://www.python.org/downloads/).
--   Get `hcxpcapngtool` from [hcxtools](https://github.com/ZerBea/hcxtools)
+-   Get `hcxpcapngtool` from [hcxtools](https://github.com/ZerBea/hcxtools).
 -   Download or clone the project.
 -   Edit the [config.json](./config.json):
 
@@ -29,4 +29,4 @@ Put your own WIFIs SSID in the whitelist like `["AndroidAP1234"]`.
 
 ## Copyright
 
-See the [license](/LICENSE)
+See the [license](/LICENSE).

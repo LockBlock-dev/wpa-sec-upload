@@ -1,9 +1,9 @@
 import requests, os
-from os import listdir, mkdir
+from os import listdir, mkdir, path
 from subprocess import run, DEVNULL
 from json import load
 
-if not os.path.isdir("./hashes"):
+if not path.isdir("./hashes"):
     try:
         os.rename("./hashes", "./hashes.old")
         print('Renamed your hashes file to "hashes.old"!')
@@ -17,7 +17,7 @@ if not os.path.isdir("./hashes"):
         )
         exit()
 
-if not os.path.isdir("./handshakes"):
+if not path.isdir("./handshakes"):
     print(
         'Failed to find handshakes! Create a directory called "handshakes", place your handshakes inside and restart the program.'
     )
@@ -61,7 +61,7 @@ for handshake in handshakes:
             stdout=DEVNULL,
         )
 
-        if os.path.exists(f"./hashes/{ssid}.hc22000"):
+        if path.exists(f"./hashes/{ssid}.hc22000"):
             f = open(f"./hashes/{ssid}.hc22000", "r")
             hash = f.read()
             f.close()

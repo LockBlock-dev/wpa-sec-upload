@@ -1,11 +1,11 @@
-import requests, os
-from os import listdir, mkdir, path
+import requests
+from os import listdir, mkdir, path, rename
 from subprocess import run, DEVNULL
 from json import load
 
 if not path.isdir("./hashes"):
     try:
-        os.rename("./hashes", "./hashes.old")
+        rename("./hashes", "./hashes.old")
         print('Renamed your hashes file to "hashes.old"!')
     except:
         pass

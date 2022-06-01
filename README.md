@@ -1,6 +1,8 @@
 # wpa-sec upload
 
-[![GitHub stars](https://img.shields.io/github/stars/LockBlock-dev/wpa-sec-upload.svg)](https://github.com/LockBlock-dev/wpa-sec-upload/stargazers)
+[![GitHub Stars](https://img.shields.io/github/stars/LockBlock-dev/wpa-sec-upload.svg)](https://github.com/LockBlock-dev/wpa-sec-upload/stargazers)
+![GitHub Watchers](https://img.shields.io/github/watchers/LockBlock-dev/wpa-sec-upload.svg)
+[![GitHub Forks](https://img.shields.io/github/forks/LockBlock-dev/wpa-sec-upload.svg)]([https://github.com/LockBlock-dev/wpa-sec-upload/stargazers](https://github.com/Lockblock-dev/wpa-sec-upload/network/members))
 
 Upload capture files to wpa-sec.
 

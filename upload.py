@@ -32,7 +32,7 @@ flag = False
 msg = ""
 uploaded = 0
 
-i = 0
+i = 1
 
 for handshake in handshakes:
     ssid = handshake.lower().split("_")[0]
@@ -99,7 +99,9 @@ for handshake in handshakes:
         msg = "\033[91mNot a handshake file!\033[0m"
 
     flag = False
-    print(f"Handshake {i+1}/{size}: {handshake} => {msg}")
+    print(f"Handshake {i}/{size}: {handshake} => {msg}")
+    
+    i += 1
 print(f"\nUploaded {uploaded} handshakes of {size} handshakes!")
 
 run(["rm", "-r", "./hashes"])

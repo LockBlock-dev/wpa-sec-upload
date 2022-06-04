@@ -5,11 +5,6 @@ from json import load
 
 if not path.isdir("./hashes"):
     try:
-        rename("./hashes", "./hashes.old")
-        print('Renamed your hashes file to "hashes.old"!')
-    except:
-        pass
-    try:
         mkdir("./hashes")
     except:
         print(
@@ -26,14 +21,9 @@ if not path.isdir("./handshakes"):
 with open("config.json", "r") as f:
     config = load(f)
     f.close()
-
-new_config = {"whitelist": []}
-
-for whitelisted_ssid in config["whitelist"]:
-    new_config.append(whitelisted_ssid.lower())
-
-config = new_config
-new_config = None
+    
+for i in range(len(config["whitelist"])):
+    config["whitelist"][i] = config["whitelist"][i].lower()
 
 handshakes = listdir("./handshakes/")
 hashes = listdir("./hashes/")
@@ -71,11 +61,7 @@ for handshake in handshakes:
             old.close()
 
             c = False
-            """ old funny code
-            for e in hash.split("\n"):
-                if len(e) > 0 and e in old_hashes:
-                    c += 1
-            """
+
             for currenthash in hash.split("\n"):
                 if (len(currenthash) != 0) and (currenthash in old_hashes):
                     c = True
@@ -113,8 +99,7 @@ for handshake in handshakes:
         msg = "\033[91mNot a handshake file!\033[0m"
 
     flag = False
-    i = i + 1
-    print(f"Handshake {i}/{size}: {handshake} => {msg}")
+    print(f"Handshake {i+1}/{size}: {handshake} => {msg}")
 print(f"\nUploaded {uploaded} handshakes of {size} handshakes!")
 
 run(["rm", "-r", "./hashes"])

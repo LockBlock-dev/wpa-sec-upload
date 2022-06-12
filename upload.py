@@ -71,8 +71,8 @@ for handshake in handshakes:
                 old.write(hash)
                 old.close()
 
-                handshake = open(f"./handshakes/{handshake}", "rb")
-                payload = {"file": handshake}
+                handshake_file = open(f"./handshakes/{handshake}", "rb")
+                payload = {"file": handshake_file}
                 headers = {"user-agent": "LockBlock-Dev/wpa-sec-upload (1.0.0)"}
                 cookies = {"key": config["api_key"]}
                 r = requests.post(
@@ -81,7 +81,7 @@ for handshake in handshakes:
                     cookies=cookies,
                     files=payload,
                 )
-                handshake.close()
+                handshake_file.close()
 
                 if r.text == "Not a valid capture file. We support pcap and pcapng.":
                     msg = "\033[91mInvalid capture file!\033[0m"
